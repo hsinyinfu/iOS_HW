@@ -19,7 +19,17 @@
  Then, let's create a book store first:
  
  */
-
+let books : [[String:String]] = [
+    ["title":"Digital Fortress","author":"Dan Brown","price":"9.99"],
+    ["title":"Angels & Demons","author":"Dan Brown","price":"17"],
+    ["title":"The Da Vinci Code","author":"Dan Brown","price":"9.99"],
+    ["title":"Deception Point","author":"Dan Brown","price":"17"],
+    ["title":"Harry Potter and the Goblet of Fire","author":"J.K. Rowling","price":"12.99"],
+    ["title":"Harry Potter and the Half-Blood Prince","author":"J.K. Rowling","price":"12.99"],
+    ["title":"Harry Potter and the Death Hallows","author":"J.K. Rowling","price":"14.99"],
+    ["title":"旅行與讀書","author":"詹宏志","price":"12.00"],
+    ["title":"國宴與家宴","author":"王宣一","price":"7.99"],
+]
 var bookStore = BookStore()
 
 /*:
@@ -37,18 +47,45 @@ var bookStore = BookStore()
  */
 
 // Use this
-//func distinctAuthors() -> Set<String> { ... }
+func distinctAuthors() -> Set<String> {
+    var setOfAuthors : Set<String> = []
+    for book in books{
+        setOfAuthors.insert(book["author"]!)
+    }
+    return setOfAuthors
+}
 // or this
-//func distinctAuthors() -> [String] { ... }
+/*func distinctAuthors() -> [String] {
+    var setOfAuthors : Set<String> = []
+    for book in books{
+        setOfAuthors.insert(book["author"]!)
+    }
+    let arrayOfAuthors = [String](setOfAuthors)
+    return arrayOfAuthors
+}*/
 // then
-//bookStore.setDataSource(authorsGetter: distinctAuthors)
+bookStore.setDataSource(authorsGetter: distinctAuthors)
 
-//func totalBookPrice() -> Double { ... }
-//bookStore.setDataSource(priceCalculator: totalBookPrice)
+func totalBookPrice() -> Double {
+    var sum = 0.0
+    for book in books{
+        sum += Double(book["price"]!)!
+    }
+    return sum
+}
+bookStore.setDataSource(priceCalculator: totalBookPrice)
 
-//func getBook(at index: Int) -> (title: String, author: String, price: Double)? { return nil }
-//bookStore.setDataSource(bookGetter: getBook(at:))
-
+func getBook(at index: Int) -> (title: String, author: String, price: Double)? {
+    guard index < books.count && index >= 0 else{
+        return nil
+    }
+    var book = books[index]
+    let title = book["title"]!
+    let author = book["author"]!
+    let price = book["price"]!
+    return ( title , author , Double(price)! )
+}
+bookStore.setDataSource(bookGetter: getBook(at:))
 /*:
 
  Finally, let's show the book store shopping cart:
