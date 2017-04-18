@@ -140,7 +140,7 @@
                                     <action selector="pos_negBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o1-fE-d4g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-Vx-hPv">
+                            <button opaque="NO" tag="1110" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-Vx-hPv">
                                 <rect key="frame" x="203" y="181" width="78" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -148,7 +148,7 @@
                                     <color key="titleColor" red="0.0011452879579999999" green="0.0011452879579999999" blue="0.0011452879579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="binaryOperatorBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Aq-qr-9At"/>
+                                    <action selector="percentBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3S-nQ-fva"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tt7-XM-8mK">
@@ -228,7 +228,7 @@
                                     <action selector="piBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hf7-z4-rr9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1107" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwk-VL-lrX">
+                            <button opaque="NO" tag="1106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwk-VL-lrX">
                                 <rect key="frame" x="297" y="525" width="78" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -239,7 +239,7 @@
                                     <action selector="binaryOperatorBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E48-98-E2S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-sC-9mZ">
+                            <button opaque="NO" tag="1105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-sC-9mZ">
                                 <rect key="frame" x="281" y="456" width="78" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>

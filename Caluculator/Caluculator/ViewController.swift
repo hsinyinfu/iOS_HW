@@ -9,12 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var currentNum = "0" {
-        didSet{
-            self.displayLabel.text = self.currentNum
-        }
-    }
     var result  =  0.0
     var operand  =  0.0
     var myOperator  =  0
@@ -73,9 +67,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func binaryOperatorBtnClicked(_ sender: UIButton) {
-        guard !self.labelCanBeFlushed else {
-            return
-        }
         let curText = self.displayLabel.text ?? "0"
         if myOperator == 0 {
             operand = Double(curText)!
@@ -91,9 +82,14 @@ class ViewController: UIViewController {
                 result = operand * Double(curText)!
             case 1104:  // division
                 result = operand / Double(curText)!
-//            case 1105:  //  percent
- //               result = operand % Double(currentNum)!
-//            case 1106 : // x^y
+            case 1105 : // x^y
+                result = pow(operand,Double(curText)!)
+            case 1106: //root
+                guard curText != "0" else{
+                    fatalError("Divide by zero!")
+                }
+                let  exp = 1 / Double(curText)!
+                result = pow(operand,exp)
             default:
                 fatalError("Unknown operator button: \(sender)")
 
@@ -106,12 +102,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func logBtnClicked(_ sender: UIButton) {
+        let curText = self.displayLabel.text ?? "0"
+        result = log10(Double(curText)!)
+        operand = result
+        self.displayLabel.text = "\(result)"
+        self.labelCanBeFlushed = true
     }
     
     @IBAction func expBtnClicked(_ sender: UIButton) {
-        self.displayLabel.text = "\(2.718281828459045)"
+        self.displayLabel.text = String( exp(1.0) )
     }
     
+    @IBAction func percentBtnClicked(_ sender: UIButton) {
+        let curText = self.displayLabel.text ?? "0"
+        var dividedByHundred = Double(curText)!
+        dividedByHundred = dividedByHundred / 100
+        self.displayLabel.text = "\(dividedByHundred)"
+        self.labelCanBeFlushed = true
+    }
+
     @IBAction func piBtnClicked(_ sender: UIButton) {
         self.displayLabel.text = "\(Double.pi)"
     }
@@ -130,6 +139,14 @@ class ViewController: UIViewController {
             result = operand * Double(curText)!
         case 1104:  // /
             result = operand / Double(curText)!
+        case 1105 : // x^y
+            result = pow(operand,Double(curText)!)
+        case 1106: //root
+            guard curText != "0" else{
+                fatalError("Divide by zero!")
+            }
+            let  exp = 1 / Double(curText)!
+            result = pow(operand,exp)
         default:
             fatalError("Unknown operator button: \(sender)")
         }
