@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var result  =  0.0
-    var operand  =  0.0
-    var myOperator  =  0
-    var labelCanBeFlushed = false
+    var result  =  0.0  //二元運算子運算完的結果存在result
+    var operand  =  0.0 //輸入二元運算子後,目前顯示的數字會被放在operand當作被運算元
+    var myOperator  =  0    //二元運算子會被放在myOperator，等到第二個運算元被輸入後才計算
+    var labelCanBeFlushed = false   //當true代表目前顯示的是運算完的結果，因此如果要輸入新數字，就要把Label全部取代掉
     
     @IBOutlet weak var displayLabel: UILabel!
     
