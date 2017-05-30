@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0CCC001EDD4B1F00553BA2 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0CCBFF1EDD4B1F00553BA2 /* AirportDetailViewController.swift */; };
 		DC828C501EDC2A79002B5498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC828C4F1EDC2A79002B5498 /* AppDelegate.swift */; };
 		DC828C551EDC2A79002B5498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC828C531EDC2A79002B5498 /* Main.storyboard */; };
 		DC828C571EDC2A79002B5498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC828C561EDC2A79002B5498 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0CCBFF1EDD4B1F00553BA2 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
 		DC828C4C1EDC2A79002B5498 /* AirportsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirportsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC828C4F1EDC2A79002B5498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC828C541EDC2A79002B5498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,10 +61,11 @@
 				DC9C73FE1EDC8B920025BA5D /* Airports Data */,
 				DC828C4F1EDC2A79002B5498 /* AppDelegate.swift */,
 				DC828C531EDC2A79002B5498 /* Main.storyboard */,
+				DC0CCBFF1EDD4B1F00553BA2 /* AirportDetailViewController.swift */,
+				DC828D0B1EDC3549002B5498 /* AirportsTableViewController.swift */,
 				DC828C561EDC2A79002B5498 /* Assets.xcassets */,
 				DC828C581EDC2A79002B5498 /* LaunchScreen.storyboard */,
 				DC828C5B1EDC2A79002B5498 /* Info.plist */,
-				DC828D0B1EDC3549002B5498 /* AirportsTableViewController.swift */,
 			);
 			name = Resources;
 			path = AirportsList;
@@ -143,6 +146,7 @@
 			files = (
 				DC828C501EDC2A79002B5498 /* AppDelegate.swift in Sources */,
 				DC828D0C1EDC3549002B5498 /* AirportsTableViewController.swift in Sources */,
+				DC0CCC001EDD4B1F00553BA2 /* AirportDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
