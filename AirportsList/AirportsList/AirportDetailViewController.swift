@@ -37,6 +37,8 @@ class AirportDetailViewController: UIViewController {
         let imageName = "Airports Data/image/" + iata! + ".jpg"
         airportImageView.image = UIImage(named: imageName )
         
+        self.title = iata
+        
     }
     
 
